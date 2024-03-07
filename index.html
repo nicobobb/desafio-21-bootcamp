@@ -5,30 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desafio 21 - Nicolas Bobb</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
+    <div class="bg__image"></div>
     <form id="form" class="formUser">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required />
+      <div class="input__container">
+        <label for="name" class="label__container"
+          ><i class="fa-solid fa-user"></i
+        ></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Nombre"
+          class="input__style"
+          required
+        />
+      </div>
+      <div class="input__container">
+        <label for="address" class="label__container"
+          ><i class="fa-solid fa-location-dot"></i
+        ></label>
+        <input
+          type="address"
+          id="address"
+          name="address"
+          placeholder="Domicilio"
+          class="input__style"
+          required
+        />
+      </div>
+      <div class="input__container">
+        <label for="email" class="label__container"
+          ><i class="fa-solid fa-envelope"></i
+        ></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Email"
+          class="input__style"
+          required
+        />
+      </div>
+      <div class="input__container">
+        <label for="insurance" class="label__container"
+          ><i class="fa-solid fa-shield-halved"></i
+        ></label>
+        <select id="insurance" name="insurance" class="select__style" required>
+          <option value="Plan de seguros" disabled selected>
+            Plan de seguros
+          </option>
+          <option value="Seguro de vida">Seguro de vida</option>
+          <option value="Seguro de salud">Seguro de salud</option>
+          <option value="Seguro contra robo">Seguro contra robo</option>
+          <option value="Seguro de incendio">Seguro de incendio</option>
+        </select>
+      </div>
+      <div class="input__container">
+        <label for="comment" class="label__container"
+          ><i class="fa-solid fa-comment"></i
+        ></label>
+        <textarea
+          id="comment"
+          name="comment"
+          placeholder="Comentario"
+          class="textarea__style"
+          rows="8"
+          required
+        ></textarea>
+      </div>
 
-      <label for="address">Dirección:</label>
-      <input type="address" id="address" name="address" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="insurance">Plan de seguros:</label>
-      <select id="insurance" name="insurance" required>
-        <option value="Seguro de vida">Seguro de vida</option>
-        <option value="Seguro de salud">Seguro de salud</option>
-        <option value="Seguro contra robo">Seguro contra robo</option>
-        <option value="Seguro de incendio">Seguro de incendio</option>
-      </select>
-
-      <label for="comment">Comentarios:</label>
-      <textarea id="comment" name="comment" required></textarea>
-
-      <button type="submit">Enviar</button>
+      <button class="button__style" type="submit">Enviar</button>
     </form>
 
     <section id="listUsers" class="sectionUsers"></section>
