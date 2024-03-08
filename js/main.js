@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
       userDiv.dataset.userId = user.id;
 
       userDiv.innerHTML = `
-          <p><strong>Nombre:</strong> ${user.name}</p>
-          <p><strong>Dirección:</strong> ${user.address}</p>
-          <p><strong>Email:</strong> ${user.email}</p>
-          <p><strong>Tipo de Seguro:</strong> ${user.insurance}</p>
-          <p><strong>Comentario:</strong> ${user.comment}</p>
+          <div class="info__container"><h3>Nombre:</h3><p>${user.name}</p> </div>
+          <div class="info__container"><h3>Dirección:</h3><p> ${user.address}</p> </div>
+          <div class="info__container"><h3>Email:</h3><p> ${user.email}</p> </div>
+          <div class="info__container"><h3>Tipo de Seguro:</h3><p> ${user.insurance}</p> </div>
+          <div class="info__container"><h3>Comentario:</h3><p> ${user.comment}</p> </div>
           <button class="deleteBtn" data-user-id="${user.id}">Eliminar</button>
         `;
 
